@@ -3,8 +3,9 @@ import React from "react";
 function DashboardSummary() {
     return (
         <div>
-            <h1>Dashboard</h1>
-            <hr/>
+            <div className="titleHeader">
+                <div className='titleName'>Dashboard</div>
+            </div>
             <h3>Summary</h3>
             <div className="asContainer">
                 {/* Items Available Summary */}

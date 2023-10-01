@@ -1,67 +1,92 @@
+/* Inventory Summary Styles */
 
-  
-  .sideForm{
+h3{
+    text-align: start;
+}
+
+.summaryCount{
+  font-size: xx-large;
+}
+
+.slabel{
+  font-weight: lighter;
+}
+
+.summaryBox{
+  text-align: start;
+  background-color: white;
+  border:1px solid #8CF17C;
+  border-radius: 10px;
+  margin: 5px;
+  width: 250px;
+  padding: 15px;
+}
+
+/* End of Inventory Summary Styles */
+
+.sideForm{
     display: flex;
     flex-direction: row;
-  }
+}
   
-  .form-item-container{
+.form-item-container{
     display: flex;
     flex-direction: row;
-  }
+}
   
-  .formLabelContainer{
+.formLabelContainer{
     margin: 30px;
     width: 100px;
-  }
+}
   
-  .formInputContainer{
+.formInputContainer{
     margin-top: 10px;
     margin-left: 100px;
     margin-right: 200px;
-  }
+}
   
-  h1{
+h1{
     color: #0E410D;
-  }
+}
   
-  label{
+label{
     color: #0E410D;
     font-size: larger;
     font-weight: bold;
-  }
+}
   
-  input, select{
+input, select{
     width: 580px;
     height: 50px;
     background-color: white;
     border: gray;
-  }
+}
   
-  .buttonContainer{
+.buttonContainer{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-  }
+}
   
-  .cancelContainer{
+.cancelContainer{
     margin-right: 30px;
-  }
+}
   
-  .cancelButton{
+.cancelButton{
     background-color: #ECC4B8;
     border: none;
     border-radius: 10px;
     width: 150px;
     height: 50px;
-  }
-  .addButton{
+}
+
+.addButton{
     background-color: #C8ECB8;
     border: none;
     border-radius: 10px;
     width: 150px;
     height: 50px;
-  }
+}
   
   
   .addFormContainer{
@@ -105,20 +130,24 @@
     flex-direction: row;
   }
   
-  .summaryBox{
-    background-color: white;
-    border:1px solid #8CF17C;
-    border-radius: 10px;
-    margin: 5px;
-    width: 250px;
-    padding: 5px;
-  }
+
   
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding-right: 30px;
-    padding-left: 30px;
-    background-color: white;
-    border-radius: 8px;
-  }
+  table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+    padding: 15px;
+}
+
+th {
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
