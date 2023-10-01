@@ -56,27 +56,3 @@
     border-radius: 8px;
     padding-left: 20px;
 }
-
-table {
-    border-collapse:separate;
-    border:solid black 1px;
-    border-radius:6px;
-}
-
-td, th {
-    border-left:solid black 1px;
-    border-top:solid black 1px;
-    padding-right: 52px;
-    padding-left: 52px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-th {
-    border-top: none;
-    
-}
-
-td:first-child, th:first-child {
-     border-left: none;
-}
