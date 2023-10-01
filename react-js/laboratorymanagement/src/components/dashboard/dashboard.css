@@ -1,8 +1,29 @@
+/* Inventory Summary Styles */
 
 h3{
     text-align: start;
 }
-  
+
+.summaryCount{
+  font-size: xx-large;
+}
+
+.slabel{
+  font-weight: lighter;
+}
+
+.summaryBox{
+  text-align: start;
+  background-color: white;
+  border:1px solid #8CF17C;
+  border-radius: 10px;
+  margin: 5px;
+  width: 250px;
+  padding: 15px;
+}
+
+/* End of Inventory Summary Styles */
+
 .sideForm{
     display: flex;
     flex-direction: row;
@@ -109,21 +130,24 @@ input, select{
     flex-direction: row;
   }
   
-  .summaryBox{
-    text-align: start;
-    background-color: white;
-    border:1px solid #8CF17C;
-    border-radius: 10px;
-    margin: 5px;
-    width: 250px;
-    padding: 5px;
-  }
+
   
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding-right: 30px;
-    padding-left: 30px;
-    background-color: white;
-    border-radius: 8px;
-  }
+  table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+    padding: 15px;
+}
+
+th {
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
