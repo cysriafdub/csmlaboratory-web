@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './navbar.css';
 
+import Dashboard from '../dashboard/dashboards.js';
+
 
 import Borrow from '../manageRequest/borrowing.js';
 import Returning from '../manageRequest/returning.js';
 import Breakage from '../manageRequest/breakage.js';
 
 
-import Glassware from '../manageRequest/borrowing.js';
+import Glassware from '../Inventory/glasswares';
 import Miscellaneous from '../manageRequest/borrowing.js';
 import Other from '../manageRequest/borrowing.js';
 
@@ -59,6 +61,7 @@ function Navbar() {
             <img src={home} className='imageFit' alt="Home"/>
           </div>
           Dashboard
+          {selectedOption === 'dashboard' && <Dashboard selectedOption={selectedOption} />}
         </button>   
 
          <button
