@@ -1,67 +1,71 @@
 
+h3{
+    text-align: start;
+}
   
-  .sideForm{
+.sideForm{
     display: flex;
     flex-direction: row;
-  }
+}
   
-  .form-item-container{
+.form-item-container{
     display: flex;
     flex-direction: row;
-  }
+}
   
-  .formLabelContainer{
+.formLabelContainer{
     margin: 30px;
     width: 100px;
-  }
+}
   
-  .formInputContainer{
+.formInputContainer{
     margin-top: 10px;
     margin-left: 100px;
     margin-right: 200px;
-  }
+}
   
-  h1{
+h1{
     color: #0E410D;
-  }
+}
   
-  label{
+label{
     color: #0E410D;
     font-size: larger;
     font-weight: bold;
-  }
+}
   
-  input, select{
+input, select{
     width: 580px;
     height: 50px;
     background-color: white;
     border: gray;
-  }
+}
   
-  .buttonContainer{
+.buttonContainer{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-  }
+}
   
-  .cancelContainer{
+.cancelContainer{
     margin-right: 30px;
-  }
+}
   
-  .cancelButton{
+.cancelButton{
     background-color: #ECC4B8;
     border: none;
     border-radius: 10px;
     width: 150px;
     height: 50px;
-  }
-  .addButton{
+}
+
+.addButton{
     background-color: #C8ECB8;
     border: none;
     border-radius: 10px;
     width: 150px;
     height: 50px;
-  }
+}
   
   
   .addFormContainer{
@@ -106,6 +110,7 @@
   }
   
   .summaryBox{
+    text-align: start;
     background-color: white;
     border:1px solid #8CF17C;
     border-radius: 10px;
