@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './inventory.css'
 
-function Glassware() {
+function Other() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
 
     const handleFloorClick = (floor) => {
@@ -58,7 +58,7 @@ function Glassware() {
 
             {/* Floor Inventory Label */}
             <div className="flrInventoryLabelContainer">
-                <div className="flrInventoryLabel">{selectedFloor} Glassware</div>
+                <div className="flrInventoryLabel">{selectedFloor} Other Items</div>
             </div>
 
             <div className="btnsearchContainer">
@@ -73,7 +73,7 @@ function Glassware() {
             </div>
 
             {/* Renders Equipment Table/Inventory */}
-            <div className="tableContainer">
+            <div>
                 <table>
                     <thead>
                         <tr>
@@ -113,4 +113,4 @@ function Glassware() {
     );
 }
 
-export default Glassware;
+export default Other;
