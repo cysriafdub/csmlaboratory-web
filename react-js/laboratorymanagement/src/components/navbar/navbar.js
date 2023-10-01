@@ -10,8 +10,8 @@ import Breakage from '../manageRequest/breakage.js';
 
 
 import Glassware from '../Inventory/glasswares';
-import Miscellaneous from '../manageRequest/borrowing.js';
-import Other from '../manageRequest/borrowing.js';
+import Miscellaneous from '../Inventory/miscallaneous';
+import Other from '../Inventory/otheritems';
 
 
 
@@ -85,7 +85,7 @@ function Navbar() {
                 >
                   <div className='iconSubContainer'>
                     <img src={requests} className='iconSub' />
-                    Breakage
+                    Borrowing
                   </div>
                 </button>
                 <button
