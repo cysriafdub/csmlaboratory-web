@@ -1,0 +1,124 @@
+
+  
+  .sideForm{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .form-item-container{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .formLabelContainer{
+    margin: 30px;
+    width: 100px;
+  }
+  
+  .formInputContainer{
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 200px;
+  }
+  
+  h1{
+    color: #0E410D;
+  }
+  
+  label{
+    color: #0E410D;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  input, select{
+    width: 580px;
+    height: 50px;
+    background-color: white;
+    border: gray;
+  }
+  
+  .buttonContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .cancelContainer{
+    margin-right: 30px;
+  }
+  
+  .cancelButton{
+    background-color: #ECC4B8;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+  }
+  .addButton{
+    background-color: #C8ECB8;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+  }
+  
+  
+  .addFormContainer{
+    margin-left: 30px;
+  }
+  
+  
+  .loginPageContainer{
+    display: flex;
+    flex-direction: row;
+    padding-top: 190px;
+    justify-content: center;
+    padding-bottom: 250px;
+  }
+  
+  .loginBox{
+    background-color: #D3F1DB;
+    padding: 80px;
+    border-radius: 10px;
+  }
+  
+  .biglogoContainer{
+    margin-right: 100px;
+    margin-top: 140px;
+  }
+  
+  .loginButtonContainer{
+    margin-top: 20px;
+  }
+  
+  .loginButton{
+    background-color: #FAB41F;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 580px;
+  }
+  
+  .asContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .summaryBox{
+    background-color: white;
+    border:1px solid #8CF17C;
+    border-radius: 10px;
+    margin: 5px;
+    width: 250px;
+    padding: 5px;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: white;
+    border-radius: 8px;
+  }
