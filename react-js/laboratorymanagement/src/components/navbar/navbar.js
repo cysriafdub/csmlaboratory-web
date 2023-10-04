@@ -2,218 +2,104 @@ import React, { useState } from 'react';
 import './navbar.css';
 
 import Dashboard from '../dashboard/dashboards.js';
-
-
 import Borrow from '../manageRequest/borrowing.js';
 import Returning from '../manageRequest/returning.js';
 import Breakage from '../manageRequest/breakage.js';
-
-
 import Glassware from '../Inventory/glasswares';
 import Miscellaneous from '../Inventory/miscallaneous';
 import Other from '../Inventory/otheritems';
-
-
+import { Link } from 'react-router-dom';
 
 import home from "../../Assets/images/Home.png";
 import manage from "../../Assets/images/manage.png";
-import group from "../../Assets/images/Group.png";
-import warning from "../../Assets/images/Warning.png";
-import lamp from "../../Assets/images/Lamp.png";
-import newgenes from "../../Assets/images/NewGenes.png";
-import grouplog from "../../Assets/images/group_log.png";
-import requests  from "../../Assets/images/requests.png";
-
-
-
+import requests from "../../Assets/images/requests.png";
 
 function Navbar() {
   const [selectedOption, setSelectedOption] = useState('');
-  const [subOption, setSubOption] = useState('');
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  // const [isSubOption, setSubOption] = useState('');
 
   const handleSideItemClick = (option) => {
-    setSelectedOption(option);
-    
-    // Set the default sub-option based on the selected option
+    // Toggle the sub-menu visibility when "Manage" is clicked
     if (option === 'manage') {
-      setSubOption('borrowing');
-    } else if (option === 'inventory') {
-      setSubOption('glassware');
+      // setSubOption('borrowing');
+      setIsSubMenuOpen(!isSubMenuOpen);
+      setSelectedOption('manage'); // Set the selectedOption to 'manage'
     } else {
-      setSubOption(''); // Reset sub-option for other menu items
+      setSelectedOption(option);
+      setIsSubMenuOpen(false); // Closethe sub-menu when other side items are clicked
     }
   };
 
 
-  const handleSubOptionClick = (subOption, event) => {
-    event.stopPropagation();
-    setSubOption(subOption);
-  };
 
   return (
     <section className="navbar">
       <ul>
-        <button
-          className={`sideItems ${selectedOption === 'dashboard' ? 'selected' : ''}`}
-          onClick={() => handleSideItemClick('dashboard')}
-        >
-          <div className='imageItem'>
-            <img src={home} className='imageFit' alt="Home"/>
-          </div>
-          Dashboard
-          {selectedOption === 'dashboard' && <Dashboard selectedOption={selectedOption} />}
-        </button>   
-
-         <button
+        <Link to="/dashboard">
+          <button
+            className={`sideItems ${selectedOption === 'dashboard' ? 'selected' : ''}`}
+            onClick={() => handleSideItemClick('dashboard')}
+          >
+            <div className='imageItem'>
+              <img src={home} className='imageFit' alt="Home"/>
+            </div>
+            Dashboard
+          </button>
+        </Link>
+        <Link to="/borrowing">
+          <button
             className={`sideItems ${selectedOption === 'manage' ? 'selected' : ''}`}
             onClick={() => handleSideItemClick('manage')}
           >
-            <div className='imageItem'>  
+            <div className='imageItem'>
               <img src={manage} className='imageFit' alt="Manage"/>
             </div>
             Manage Request
           </button>
+        </Link>
 
-             {/* sub options for manage request */}
+        {/* Sub options for manage request */}
+        {(selectedOption === 'manage' || isSubMenuOpen) && (
+          <div className="sub-options">
+            <Link to="/borrowing">
+              <button
+                className={`sub-option ${selectedOption === 'borrowing' ? 'active' : ''}`}
+                onClick={() => setSelectedOption('borrowing')}
+              >
+                <div className='iconSubContainer'>
+                  <img src={requests} className='iconSub' alt="Borrowing"/>
+                  Borrowing
+                </div>
+              </button>
+            </Link>
 
+            <Link to="/returning">
+              <button
+                className={`sub-option ${selectedOption === 'returning' ? 'active' : ''}`}
+                onClick={() => setSelectedOption('returning')}
+              >
+                <div className='iconSubContainer'>
+                  <img src={requests} className='iconSub' alt="Returning"/>
+                  Returning
+                </div>
+              </button>
+            </Link>
 
-            {selectedOption === 'manage' && (
-              <div className="sub-options">
-                <button
-                  className={`sub-option ${subOption === 'borrowing' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('borrowing', event)}
-                >
-                  <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                    Borrowing
-                  </div>
-                </button>
-                <button
-                  className={`sub-option ${subOption === 'returning' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('returning', event)}
-                >
-                  <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                    Returning
-                  </div>
-                </button>
-                <button
-                  className={`sub-option ${subOption === 'breakage' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('breakage', event)}
-                >
-                  <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                    Breakage
-                  </div>
-                </button>
-              </div>
-            )}
-
-            {/* navigating to options */}
-
-            {selectedOption === 'manage' && subOption === 'borrowing' && (
+            <Link to="/breakage">
+              <button
+                className={`sub-option ${selectedOption === 'breakage' ? 'active' : ''}`}
+                onClick={() => setSelectedOption('breakage')}
+              >
+                <div className='iconSubContainer'>
+                  <img src={requests} className='iconSub' alt="Breakage"/>
+                  Breakage
+                </div>
+              </button>
+            </Link>
           
-              <Borrow subOption={subOption} />
-            )}
-
-            {selectedOption === 'manage' && subOption === 'returning' && (
-              <Returning subOption={subOption} />
-            )}
-
-            {selectedOption === 'manage' && subOption === 'breakage' && (
-              <Breakage subOption={subOption} />
-            )}
-
-        
-        <button
-                  className={`sideItems ${selectedOption === 'inventory' ? 'selected' : ''}`}
-                  onClick={() => handleSideItemClick('inventory')}
-                >
-                  <div className='imageItem'>
-                    <img src={group} className='imageFit' alt="Inventory"/>
-                  </div>
-                  Inventory
-        </button>
-
-
-          {/* sub options for manage request */}
-
-          {selectedOption === 'inventory' && (
-              <div className="sub-options">
-                <button
-                  className={`sub-option ${subOption === 'glassware' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('glassware', event)}
-                >
-                   <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                     Glassware
-                  </div>
-                </button>
-
-
-                <button
-                  className={`sub-option ${subOption === 'miscellaneous' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('miscellaneous', event)}
-                >
-                  <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                    Miscellaneous
-                  </div>
-
-                </button>
-
-
-                <button
-                  className={`sub-option ${subOption === 'other' ? 'active' : ''}`}
-                  onClick={(event) => handleSubOptionClick('other', event)}
-                >
-                  <div className='iconSubContainer'>
-                    <img src={requests} className='iconSub' />
-                    Other Items
-                  </div>
-                </button>
-              </div>
-            )}
-
-
-          {/* navigating to options */}
-            {selectedOption === 'inventory' && subOption === 'glassware' && (
-                    
-              <Glassware subOption={subOption} />
-            )}
-
-            {selectedOption === 'inventory' && subOption === 'miscellaneous' && (
-              <Miscellaneous subOption={subOption} />
-            )}
-
-            {selectedOption === 'inventory' && subOption === 'other' && (
-              <Other subOption={subOption} />
-            )}
-
-        <button
-          className={`sideItems ${selectedOption === 'reports' ? 'selected' : ''}`}
-          onClick={() => handleSideItemClick('reports')}
-        >
-          <div className='imageItem'>
-            <img src={warning} className='imageFit' alt="Reports"/>
           </div>
-          Reports
-        </button>
-
-        <button
-          className={`sideItems ${selectedOption === 'help' ? 'selected' : ''}`}
-          onClick={() => handleSideItemClick('help')}
-        >
-          <div className='imageItem'>
-            <img src={lamp} className='imageFit' alt="Help"/>
-          </div>
-          Help and Support
-        </button>
-        
-        <div className='imageNewGenes'>
-          <img src={grouplog} className="imgNG" alt="Group Logo"/>
-          <img src={newgenes} alt="New Genes"/>
-        </div>
+        )}
       </ul>
     </section>
   );

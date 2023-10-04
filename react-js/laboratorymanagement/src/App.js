@@ -1,22 +1,32 @@
-// src/App.js
 import React from 'react';
-import './App.css'; // Import your global styles if you have any
-import Header from './components/header/header'; // Import the Header component
+import './App.css';
+import Header from './components/header/header';
 import Nav from './components/navbar/navbar';
-// import Request from './components/requests/requests';
-// import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Borrow from './components/manageRequest/borrowing.js';
+
+import Returning from './components/manageRequest/returning.js';
+import Breakage from './components/manageRequest/breakage.js';
+
+// import Dashboard  from './components/dashboard/dashboards.js';
+import Dashboard from './components/dashboard/dashboards.js';
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav /> 
-
+    <Router>
+      <div className="App">
+        <Header />
+        <Nav />
+        <Routes>
+         <Route path="/dashboard" element={<Dashboard />} />
+         <Route path="/manage" element={<Borrow/>} />
+         <Route path="/borrowing" element={<Borrow/>} />
+         <Route path="/returning" element={<Returning/>} />
+         <Route path="/breakage" element={<Breakage/>} />
      
-      
-   
-    </div>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
