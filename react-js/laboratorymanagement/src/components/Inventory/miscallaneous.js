@@ -91,6 +91,7 @@ function Miscellaneous() {
                             <th>Out</th>
                             <th>Balance</th>
                             <th>Remarks</th>
+                            <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -107,6 +108,11 @@ function Miscellaneous() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
+                                <td>
+                                    <Link to={`/edit/${item.id}`}>
+                                        <button className="addItemBtn">Edit</button>
+                                    </Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

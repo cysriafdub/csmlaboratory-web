@@ -59,7 +59,7 @@ function Glassware() {
 
             {/* Floor Inventory Label */}
             <div className="flrInventoryLabelContainer">
-                <div className="flrInventoryLabel">{selectedFloor} Glassware</div>
+                <div className="flrInventoryLabel">{selectedFloor} Miscellaneous</div>
             </div>
 
             <div className="btnsearchContainer">
@@ -91,6 +91,7 @@ function Glassware() {
                             <th>Out</th>
                             <th>Balance</th>
                             <th>Remarks</th>
+                            <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -107,6 +108,11 @@ function Glassware() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
+                                <td>
+                                    <Link to={`/edit/${item.id}`}>
+                                        <button className="addItemBtn">Edit</button>
+                                    </Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

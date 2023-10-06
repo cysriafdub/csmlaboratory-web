@@ -15,6 +15,7 @@ import Glassware from './components/Inventory/glasswares';
 import Miscellaneous from './components/Inventory/miscallaneous';
 import Other from './components/Inventory/otheritems';
 import AddItem from './components/Inventory/additem';
+import EditItem from './components/Inventory/edititem';
 function App() {
   return (
     <Router>
@@ -32,6 +33,7 @@ function App() {
          <Route path="/miscellaneous" element={<Miscellaneous />} />
          <Route path="/other" element={<Other />} />
          <Route path='add-item' element={<AddItem />} />
+         <Route path="/edit/:id" element={<EditItem />} />
         </Routes>
       </div>
     </Router>
