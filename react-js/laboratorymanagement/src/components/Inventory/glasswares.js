@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './inventory.css'
+import { Link } from "react-router-dom";
 
 function Glassware() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
@@ -64,7 +65,9 @@ function Glassware() {
             <div className="btnsearchContainer">
                 {/* Add Item Button */}
                 <div className="addBtnContainer">
-                    <button className="addItemBtn">Add Item</button>
+                    <Link to="/add-item">
+                        <button className="addItemBtn">Add Item</button>
+                    </Link>
                 </div>
                 {/* Search Bar */}
                 <div className="addBtnContainer">
