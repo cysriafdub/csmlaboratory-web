@@ -66,8 +66,8 @@ table {
 td, th {
     border-left:solid black 1px;
     border-top:solid black 1px;
-    padding-right: 45px;
-    padding-left: 45px;
+    padding-right: 42px;
+    padding-left: 42px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -79,4 +79,18 @@ th {
 
 td:first-child, th:first-child {
      border-left: none;
+}
+
+.deleteItemBtn{
+    padding: 10px;
+    background-color: #c72323;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
 }

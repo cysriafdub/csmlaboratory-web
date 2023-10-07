@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './inventory.css'
 import { Link } from "react-router-dom";
 
-function Other() {
+function Glassware() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
 
     const handleFloorClick = (floor) => {
@@ -108,10 +108,11 @@ function Other() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
-                                <td>
+                                <td className="buttons">
                                     <Link to={`/edit/${item.id}`}>
                                         <button className="addItemBtn">Edit</button>
                                     </Link>
+                                    <button className="deleteItemBtn">Delete</button>
                                 </td>
                             </tr>
                         ))}
@@ -122,4 +123,4 @@ function Other() {
     );
 }
 
-export default Other;
+export default Glassware;

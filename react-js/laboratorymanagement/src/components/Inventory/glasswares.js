@@ -108,10 +108,11 @@ function Glassware() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
-                                <td>
+                                <td className="buttons">
                                     <Link to={`/edit/${item.id}`}>
                                         <button className="addItemBtn">Edit</button>
                                     </Link>
+                                    <button className="deleteItemBtn">Delete</button>
                                 </td>
                             </tr>
                         ))}
