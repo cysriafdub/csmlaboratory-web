@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './inventory.css'
 import { Link } from "react-router-dom";
 
-function Glassware() {
+function Miscellaneous() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
 
     const handleFloorClick = (floor) => {
@@ -123,4 +123,4 @@ function Glassware() {
     );
 }
 
-export default Glassware;
+export default Miscellaneous;
