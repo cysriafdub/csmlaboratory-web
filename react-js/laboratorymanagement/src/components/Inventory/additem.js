@@ -1,10 +1,20 @@
 import React from 'react';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import './inventory.css'
+import { Link } from 'react-router-dom';
 
 function AddItem() {
     return (
         <div className="content">
-            <div>
-                <h1>Add Items</h1>
+            <div className='addItemHeader'>
+                <Link to='/inventory'>
+                    <button className='backIconContainer'>
+                        <ArrowBackIcon sx={{height: 48, width: 48}}/>
+                    </button>
+                </Link>
+                <div>
+                    <h1>Add Items</h1>
+                </div>
             </div>
             
             <hr></hr>

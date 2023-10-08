@@ -94,3 +94,15 @@ td:first-child, th:first-child {
     display: flex;
     flex-direction: row;
 }
+
+.addItemHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+.backIconContainer{
+    padding-top: 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+}
