@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {IoMdListBox} from 'react-icons/io'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {MdCancel} from 'react-icons/md'
+import {BsHourglassSplit} from 'react-icons/bs'
 
 import List from '../breakageTransactions/breakageList';
 import Pending from '../breakageTransactions/breakagePending';
@@ -45,7 +46,7 @@ function Breakage() {
           > 
             <div className='borrowIconContainer'>
                 
-                <BsFillCheckCircleFill className='icon' />
+                <BsHourglassSplit className='icon' />
              
             </div>
             <div className="borrowStatusTitle">Pending </div>
@@ -60,7 +61,7 @@ function Breakage() {
 
           <div className='borrowIconContainer'>
                 
-                <MdCancel className='icon' />
+                <BsFillCheckCircleFill className='icon' />
              
             </div>
             <div className="borrowStatusTitle"> Replaced
