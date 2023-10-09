@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import useLocation
+
 
 
 import Borrow from './components/manageRequest/borrowing.js';
@@ -22,8 +22,6 @@ function App() {
     <Router> {/* Wrap your entire app with the Router */}
     
       <div className="App">
-        
-        <NavHeaderVisibility />
 
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
