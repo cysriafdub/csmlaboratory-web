@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import './navbar.css';
 
-import Dashboard from '../dashboard/dashboards.js';
-import Borrow from '../manageRequest/borrowing.js';
-import Returning from '../manageRequest/returning.js';
-import Breakage from '../manageRequest/breakage.js';
-import Glassware from '../Inventory/glasswares';
-import Miscellaneous from '../Inventory/miscallaneous';
-import Other from '../Inventory/otheritems';
 import { Link } from 'react-router-dom';
 
 import home from "../../Assets/images/Home.png";
 import manage from "../../Assets/images/manage.png";
 import requests from "../../Assets/images/requests.png";
+import group from "../../Assets/images/Group.png";
+import warning from "../../Assets/images/Warning.png"
+import help from "../../Assets/images/Lamp.png"
+import ng from "../../Assets/images/NewGenes.png"
 
 
 function Navbar() {
@@ -66,7 +63,7 @@ function Navbar() {
           </button>
         </Link>
         
-        <Link to="/borrowing">
+        <Link to="/borrowing/pending">
           <button
             className={`sideItems ${selectedOption === 'manage' ? 'selected' : ''}`}
             onClick={() => handleSideItemClick('manage')}
@@ -81,8 +78,8 @@ function Navbar() {
         {/* Sub options for manage request */}
         {(selectedOption === 'manage' || isManageSubMenuOpen) && (
           <div className="sub-options">
-            <Link to="/borrowing">
-              <button
+            <Link to="/borrowing/pending"
+             
                 className={`sub-option ${subOption === 'borrowing' ? 'active' : ''}`}
                 onClick={() =>  handleSubOptionClick('borrowing')}
               >
@@ -90,11 +87,10 @@ function Navbar() {
                   <img src={requests} className='iconSub' alt="Borrowing"/>
                   Borrowing
                 </div>
-              </button>
+             
             </Link>
 
-            <Link to="/returning">
-              <button
+            <Link to="/returning/pending"
                 className={`sub-option ${subOption === 'returning' ? 'active' : ''}`}
                 onClick={() =>  handleSubOptionClick('returning')}
               >
@@ -102,11 +98,11 @@ function Navbar() {
                   <img src={requests} className='iconSub' alt="Returning"/>
                   Returning
                 </div>
-              </button>
+              
             </Link>
 
-            <Link to="/breakage">
-              <button
+            <Link to="/breakage/list"
+             
                 className={`sub-option ${subOption === 'breakage' ? 'active' : ''}`}
                 onClick={() =>  handleSubOptionClick('breakage')}
               >
@@ -114,7 +110,7 @@ function Navbar() {
                   <img src={requests} className='iconSub' alt="Breakage"/>
                   Breakage
                 </div>
-              </button>
+              
             </Link>
           </div>
         )}
@@ -126,7 +122,7 @@ function Navbar() {
                 onClick={() => handleSideItemClick('inventory')}
               >
                 <div className='imageItem'>
-                  <img src={manage} className='imageFit' alt="Inventory"/>
+                  <img src={group} className='imageFit' alt="Inventory"/>
                 </div>
                 Inventory
               </button>
@@ -135,8 +131,8 @@ function Navbar() {
             {/* Sub options for manage request */}
             {(selectedOption === 'inventory' || isInventorySubMenuOpen) && (
               <div className="sub-options">
-                <Link to="/glassware">
-                  <button
+                <Link to="/glassware"
+                  
                     className={`sub-option ${subOption === 'glassware' ? 'active' : ''}`}
                     onClick={() =>  handleSubOptionClick('glassware')}
                   >
@@ -144,11 +140,11 @@ function Navbar() {
                       <img src={requests} className='iconSub' alt="Glassware"/>
                       Glassware
                     </div>
-                  </button>
+                
                 </Link>
 
-                <Link to="/miscellaneous">
-                  <button
+                <Link to="/miscellaneous"
+                 
                     className={`sub-option ${subOption === 'miscellaneous' ? 'active' : ''}`}
                     onClick={() =>  handleSubOptionClick('miscellaneous')}
                   >
@@ -156,11 +152,11 @@ function Navbar() {
                       <img src={requests} className='iconSub' alt="Miscellaneous"/>
                       Miscellaneous
                     </div>
-                  </button>
+           
                 </Link>
 
-                <Link to="/other">other
-                  <button
+                <Link to="/other"
+                
                     className={`sub-option ${subOption === 'other' ? 'active' : ''}`}
                     onClick={() =>  handleSubOptionClick('other')}
                   >
@@ -168,12 +164,39 @@ function Navbar() {
                       <img src={requests} className='iconSub' alt="Other Items"/>
                       Other Items
                     </div>
-                  </button>
+                  
                 </Link>
           </div>
         )}
+
+        <Link to="/reports">
+          <button
+            className={`sideItems ${selectedOption === 'reports' ? 'selected' : ''}`}
+            onClick={() => handleSideItemClick('reports')}
+          >
+            <div className='imageItem'>
+              <img src={warning} className='imageFit' alt="Home"/>
+            </div>
+            Reports
+          </button>
+        </Link>
+
+        <Link to="/help">
+          <button
+            className={`sideItems ${selectedOption === 'help' ? 'selected' : ''}`}
+            onClick={() => handleSideItemClick('help')}
+          >
+            <div className='imageItem'>
+              <img src={help} className='imageFit' alt="Home"/>
+            </div>
+            Help and Support 
+          </button>
+        </Link>
         
       </ul>
+          <div className='imageNewGenes'>
+            <img src={ng} className='imgNG'/> 
+          </div>
     </section>
   );
 }
