@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import {GoArrowLeft} from 'react-icons/go'
 
 
-function borrowAcceptedView() {
+function BorrowAcceptedView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -220,4 +220,4 @@ function borrowAcceptedView() {
   );
 }
 
-export default borrowAcceptedView;
+export default BorrowAcceptedView;

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import {RxDotFilled} from 'react-icons/rx'
 
 import {GoArrowLeft} from 'react-icons/go'
-function breakageListView() {
+function BreakageListView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -227,4 +227,4 @@ function breakageListView() {
   );
 }
 
-export default breakageListView;
+export default BreakageListView;

@@ -7,7 +7,7 @@ import {GoArrowLeft} from 'react-icons/go'
 
 
 
-function returnReturnedView() {
+function ReturnReturnedView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -220,4 +220,4 @@ function returnReturnedView() {
   );
 }
 
-export default returnReturnedView;
+export default ReturnReturnedView;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import {BsHourglassSplit} from 'react-icons/bs'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
@@ -9,7 +9,6 @@ import Pending from '../returnTransactions/returnPending';
 import Return from '../returnTransactions/returnReturned.js';
 
 function Returning() {
-  const { status } = useParams();
   const [selectedStatus, setSelectedStatus] = useState('pending');
 
   const handleStatusClick = (status) => {
