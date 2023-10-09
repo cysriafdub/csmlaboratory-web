@@ -6,8 +6,9 @@ import {BsHourglassSplit} from 'react-icons/bs'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {MdCancel} from 'react-icons/md'
 
-import Pending from '../borrowingViews/borrowPendingView';
-import Accepted from '../borrowingViews/borrowAcceptedView.js';
+import Pending from '../borrowTransactions/borrowPending';
+import Accepted from '../borrowTransactions/borrowAccepted';
+import Rejected from '../borrowTransactions/borrowRejected';
 
 function Borrowing() {
   const { status } = useParams();
@@ -78,7 +79,7 @@ function Borrowing() {
       <div className="selectedStatusContainer">
         {selectedStatus === 'pending' && <Pending />}
         {selectedStatus === 'accepted' && <Accepted />}
-        {selectedStatus === 'rejected' && <Pending />}
+        {selectedStatus === 'rejected' && <Rejected />}
         {/* Add similar conditions for 'rejected' status if needed */}
       </div>
     </section>

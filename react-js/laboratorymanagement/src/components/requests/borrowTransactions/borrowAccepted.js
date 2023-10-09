@@ -1,10 +1,10 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
+import { Link } from 'react-router-dom';
 
 
-
-function BorrowAcceptedView() {
- 
+function BorrowingAccepted() {
+  const [selectedStatus, setSelectedStatus] = useState('accepted');
   const acceptedItems = [
     {
       id: 1034,
@@ -24,9 +24,10 @@ function BorrowAcceptedView() {
   ]
 
   return (
-<div className="optionContainer"> 
+ 
+            <div className="optionContainer"> 
               <div
-              className="selectedStatusTitle">Approve</div>
+              className="selectedStatusTitle"> Accepted / Approve </div>
               {acceptedItems.map((item) => (
              
                 <div className='transactionContainer'>
@@ -49,14 +50,17 @@ function BorrowAcceptedView() {
                     </div>
 
                   </div>
-                  <div className='transactionThirdRow'>
-                    Tap to View
-                  </div>
+                    <Link to={`/borrowing/accepted/view/${item.id}`}>
+                          <div className='transactionThirdRow'>
+                            Tap to View
+
+                          </div>
+                      </Link>
                 </div>
               
               ))}
             </div>
-  );
-}
+          )}
+ 
 
-export default BorrowAcceptedView;
+export default BorrowingAccepted;

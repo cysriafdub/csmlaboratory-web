@@ -1,41 +1,39 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
+import { Link } from 'react-router-dom';
 
 
-
-function ReturnPending() {
+function ReturningPending() {
  
-    const acceptedItems = [
+    const pendingItems = [
         {
           id: 1034,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Approved'
+          status: 'Returning'
         },
         {
-          id: 1234,
+          id: 1022,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Approved'
+          status: 'Returning'
         }
         
-        
-       
       ]
 
   return (
     <div className="optionContainer"> 
     <div
-    className="selectedStatusTitle"> Returned </div>
-    {acceptedItems.map((item) => (
+    className="selectedStatusTitle">Pending Approve</div>
+    {pendingItems.map((item) => (
    
       <div className='transactionContainer'>
         <div className='transactionFirstRow'>
           <div>Transaction ID #{item.id} </div>
           <div className='transactionStatusContainer'>
             <div className='statusIconContainer'>  
-               <RxDotFilled className='iconApprove'/> </div>
-            <div className='itemApproveStatusText'> {item.status}</div>
+               <RxDotFilled className='iconPendingChecking'/> </div>
+            <div className='itemPendingStatusText'> {item.status}</div>
           </div>
          
         </div>
@@ -49,9 +47,11 @@ function ReturnPending() {
           </div>
 
         </div>
-        <div className='transactionThirdRow'>
-          Tap to View
-        </div>
+        <Link to={`/returning/pending/view/${item.id}`}>
+          <div className='transactionThirdRow'>
+            Tap to View
+          </div>
+      </Link>
       </div>
     
     ))}
@@ -59,4 +59,4 @@ function ReturnPending() {
   );
 }
 
-export default ReturnPending;
+export default ReturningPending;

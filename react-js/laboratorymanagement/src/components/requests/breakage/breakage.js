@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
-import {BsHourglassSplit} from 'react-icons/bs'
+import {IoMdListBox} from 'react-icons/io'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {MdCancel} from 'react-icons/md'
 
-import List from '../breakageViews/breakageList';
-import Pending from '../breakageViews/breakagePending';
-import Replaced from '../breakageViews/breakageReplaced';
+import List from '../breakageTransactions/breakageList';
+import Pending from '../breakageTransactions/breakagePending';
+import Replaced from '../breakageTransactions/breakageReplaced';
+
+
 
 function breakage() {
   const { status } = useParams();
@@ -31,7 +32,7 @@ function breakage() {
             > 
               <div className='borrowIconContainer'>
                 
-                 <BsHourglassSplit className='icon' />  
+                     <IoMdListBox className='icon' />
               </div>
               <div className="borrowStatusTitle">Breakage List
              </div>
@@ -48,7 +49,7 @@ function breakage() {
                 <BsFillCheckCircleFill className='icon' />
              
             </div>
-            <div className="borrowStatusTitle">pending </div>
+            <div className="borrowStatusTitle">Pending </div>
         </Link>
 
         

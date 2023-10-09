@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import './return.css'
+
 import {BsHourglassSplit} from 'react-icons/bs'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {MdCancel} from 'react-icons/md'
 
-import Pending from '../returningViews/returnPendingView';
-import Return from '../returningViews/returnReturnedView.js';
+import Pending from '../returnTransactions/returnPending';
+import Return from '../returnTransactions/returnReturned.js';
 
 function Returning() {
   const { status } = useParams();
