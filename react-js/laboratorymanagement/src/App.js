@@ -15,6 +15,12 @@ import EditItem from './components/Inventory/edititem';
 import Login from './components/login/login';
 import NavHeaderVisibility from './components/login/loginisolate';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import useLocation
+
+import Header from './components/header/header';
+import Sidebar from './components/sidebar/sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
  
 
@@ -22,7 +28,11 @@ function App() {
     <Router> {/* Wrap your entire app with the Router */}
     
       <div className="App">
+          <NavHeaderVisibility />
 
+
+          <Header />
+          <Sidebar />
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/manage" element={<Borrow />} />
