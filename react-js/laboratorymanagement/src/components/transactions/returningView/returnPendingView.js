@@ -6,7 +6,7 @@ import {RxDotFilled} from 'react-icons/rx';
 
 import {GoArrowLeft} from 'react-icons/go'
 
-function returnPendingView() {
+function ReturnPendingView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -231,4 +231,4 @@ function returnPendingView() {
   );
 }
 
-export default returnPendingView;
+export default ReturnPendingView;

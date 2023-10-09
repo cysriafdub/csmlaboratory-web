@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './borrow.css';
 import {BsHourglassSplit} from 'react-icons/bs'
@@ -11,7 +11,6 @@ import Accepted from '../borrowTransactions/borrowAccepted';
 import Rejected from '../borrowTransactions/borrowRejected';
 
 function Borrowing() {
-  const { status } = useParams();
   const [selectedStatus, setSelectedStatus] = useState('pending');
 
   const handleStatusClick = (status) => {

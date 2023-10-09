@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {IoMdListBox} from 'react-icons/io'
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {MdCancel} from 'react-icons/md'
@@ -10,8 +10,7 @@ import Replaced from '../breakageTransactions/breakageReplaced';
 
 
 
-function breakage() {
-  const { status } = useParams();
+function Breakage() {
   const [selectedStatus, setSelectedStatus] = useState('breakage');
 
   const handleStatusClick = (status) => {
@@ -86,4 +85,4 @@ function breakage() {
   );
 }
 
-export default breakage;
+export default Breakage;

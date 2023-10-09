@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 import {GoArrowLeft} from 'react-icons/go'
-function borrowPendingView() {
+function BorrowPendingView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -235,4 +235,4 @@ function borrowPendingView() {
   );
 }
 
-export default borrowPendingView;
+export default BorrowPendingView;

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import {RxDotFilled} from 'react-icons/rx';
 
 import {GoArrowLeft} from 'react-icons/go';
-function breakagePendingView() {
+function BreakagePendingView() {
   const [selectedStatus, setSelectedStatus] = useState('');
 
 
@@ -216,4 +216,4 @@ function breakagePendingView() {
   );
 }
 
-export default breakagePendingView;
+export default BreakagePendingView;
