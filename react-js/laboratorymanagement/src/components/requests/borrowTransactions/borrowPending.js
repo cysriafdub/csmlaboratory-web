@@ -1,8 +1,8 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
 import { Link} from 'react-router-dom';
-function BorrowPendingView() {
- 
+function BorrowingPending() {
+
   const pendingItems = [
     {
       id: 1034,
@@ -46,7 +46,7 @@ function BorrowPendingView() {
 
         </div>
         
-        <Link to={`/pendingview/${item.id}`}>
+        <Link to={`/borrowing/pending/view/${item.id}`}>
           <div className='transactionThirdRow'>
             Tap to View
 
@@ -59,4 +59,4 @@ function BorrowPendingView() {
   );
 }
 
-export default BorrowPendingView;
+export default BorrowingPending;

@@ -1,22 +1,22 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
+import './breakage.css';
+import { Link } from 'react-router-dom';
 
-
-
-function ReturnPending() {
+function breakageList() {
  
-    const pendingItems = [
+    const breakageItems = [
         {
           id: 1034,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Returning'
+          status: 'Breakage'
         },
         {
-          id: 1022,
+          id: 1234,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Returning'
+          status: 'Breakage'
         }
         
       ]
@@ -24,16 +24,16 @@ function ReturnPending() {
   return (
     <div className="optionContainer"> 
     <div
-    className="selectedStatusTitle">Pending Approve</div>
-    {pendingItems.map((item) => (
+    className="selectedStatusTitle">Breakage List </div>
+    {breakageItems.map((item) => (
    
       <div className='transactionContainer'>
         <div className='transactionFirstRow'>
           <div>Transaction ID #{item.id} </div>
           <div className='transactionStatusContainer'>
             <div className='statusIconContainer'>  
-               <RxDotFilled className='iconPendingChecking'/> </div>
-            <div className='itemPendingStatusText'> {item.status}</div>
+               <RxDotFilled className='iconBreakageChecking'/> </div>
+            <div className='itemBreakageStatusText'> {item.status}</div>
           </div>
          
         </div>
@@ -47,9 +47,12 @@ function ReturnPending() {
           </div>
 
         </div>
-        <div className='transactionThirdRow'>
-          Tap to View
-        </div>
+        <Link to={`/breakage/list/view/${item.id}`}>
+          <div className='transactionThirdRow'>
+            Tap to View
+
+          </div>
+      </Link>
       </div>
     
     ))}
@@ -57,4 +60,4 @@ function ReturnPending() {
   );
 }
 
-export default ReturnPending;
+export default breakageList;

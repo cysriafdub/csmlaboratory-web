@@ -57,7 +57,7 @@
    
 }
 
-div.selected-item{
+.selected-item{
     display: flex;
     flex-direction: column;
     margin-left: 3px;
@@ -70,7 +70,6 @@ div.selected-item{
     margin-right: 15px;
     border-radius: 15px;
     border: 2.5px solid #FFF400;
-    
     background: linear-gradient(115deg, rgba(193, 244, 184, 0.75) 8.68%, rgba(110, 215, 93, 0.75) 51.97%, rgba(254, 251, 184, 0.75) 97.89%);
     font-size: 20px;
     color: hsla(119, 67%, 15%, 1);
@@ -93,9 +92,29 @@ div.selected-item{
     background: rgba(178, 223, 171, 0.20);
     color: hsla(119, 67%, 15%, 1);
     font-size: 20px;
-  
+     text-decoration: none;
 }
 
+.borrowMiniContainer.selected-item{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3px;
+    width: 200px;
+    height: 200px;
+    padding: 10px 20px;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(178, 223, 171, 0.20);
+    margin-right: 15px;
+    border-radius: 15px;
+    border: 2.5px solid #FFF400;
+    background: linear-gradient(115deg, rgba(193, 244, 184, 0.75) 8.68%, rgba(110, 215, 93, 0.75) 51.97%, rgba(254, 251, 184, 0.75) 97.89%);
+    font-size: 20px;
+    color: hsla(119, 67%, 15%, 1);
+    font-weight: 700;
+    text-decoration: none;
+  
+}
 .borrowIconContainer{
     position: absolute;
     display: flex;

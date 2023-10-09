@@ -1,39 +1,41 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
+import { Link } from 'react-router-dom';
 
 
-
-function breakageList() {
+function ReturningReturn() {
  
-    const breakageItems = [
+    const acceptedItems = [
         {
           id: 1034,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Breakage'
+          status: 'Approved'
         },
         {
           id: 1234,
           date: 'August 19, 2023',
           time: '9:00am',
-          status: 'Breakage'
+          status: 'Approved'
         }
         
+        
+       
       ]
 
   return (
     <div className="optionContainer"> 
     <div
-    className="selectedStatusTitle">Breakage List </div>
-    {breakageItems.map((item) => (
+    className="selectedStatusTitle"> Returned </div>
+    {acceptedItems.map((item) => (
    
       <div className='transactionContainer'>
         <div className='transactionFirstRow'>
           <div>Transaction ID #{item.id} </div>
           <div className='transactionStatusContainer'>
             <div className='statusIconContainer'>  
-               <RxDotFilled className='iconBreakageChecking'/> </div>
-            <div className='itemBreakageStatusText'> {item.status}</div>
+               <RxDotFilled className='iconApprove'/> </div>
+            <div className='itemApproveStatusText'> {item.status}</div>
           </div>
          
         </div>
@@ -47,9 +49,12 @@ function breakageList() {
           </div>
 
         </div>
-        <div className='transactionThirdRow'>
-          Tap to View
-        </div>
+        <Link to={`/returning/returned/view/${item.id}`}>
+          <div className='transactionThirdRow'>
+            Tap to View
+
+          </div>
+      </Link>
       </div>
     
     ))}
@@ -57,4 +62,4 @@ function breakageList() {
   );
 }
 
-export default breakageList;
+export default ReturningReturn;

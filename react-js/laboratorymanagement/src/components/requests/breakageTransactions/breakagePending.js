@@ -1,6 +1,6 @@
 import React, { useState }from 'react';
 import {RxDotFilled} from 'react-icons/rx'
-
+import { Link } from 'react-router-dom';
 
 
 function breakagePending() {
@@ -26,7 +26,7 @@ function breakagePending() {
   return (
    <div className="optionContainer"> 
               <div
-              className="selectedStatusTitle">Pending/Approve </div>
+              className="selectedStatusTitle"> Replacement Requests </div>
               {pendingItems.map((item) => (
              
                 <div className='transactionContainer'>
@@ -49,9 +49,12 @@ function breakagePending() {
                     </div>
 
                   </div>
-                  <div className='transactionThirdRow'>
-                    Tap to View
-                  </div>
+                  <Link to={`/breakage/pending/view/${item.id}`}>
+                    <div className='transactionThirdRow'>
+                      Tap to View
+
+                    </div>
+                </Link>
                 </div>
               
               ))}
