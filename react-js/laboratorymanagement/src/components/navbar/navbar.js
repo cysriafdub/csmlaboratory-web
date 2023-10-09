@@ -159,7 +159,7 @@ function Navbar() {
                   </button>
                 </Link>
 
-                <Link to="/other">other
+                <Link to="/other">
                   <button
                     className={`sub-option ${subOption === 'other' ? 'active' : ''}`}
                     onClick={() =>  handleSubOptionClick('other')}

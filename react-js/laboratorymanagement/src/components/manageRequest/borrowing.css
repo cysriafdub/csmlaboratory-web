@@ -106,8 +106,8 @@ div.selected-item{
    
 }
 .icon{
-    height: 80px;
-    width: 80px;
+    height: 80px !important; 
+    width: 80px !important;
 }
 
 /* SELECTED VIEW BELOW */

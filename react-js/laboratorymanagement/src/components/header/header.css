@@ -24,9 +24,18 @@
     height: 100%
 
   }
+
+  #basic-button{
+    height: 75px;
+  }
+
+.custom-menu-style{
+  background-color: #87A982;
+}
+
   .iconSettings{
-    padding-right: 25px;
-    padding-top: 25px;
+    padding-right: 25px ;
+    padding-top: 0px !important;
     padding-bottom: 25px;
     height: 55px;
     width: 55px;
@@ -39,3 +48,7 @@
     color: hsla(119, 67%, 15%, 1)
   }
   
+  a{
+    text-decoration: none;
+    color: black;
+  }

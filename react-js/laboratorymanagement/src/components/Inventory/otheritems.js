@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './inventory.css'
+import { Link } from "react-router-dom";
 
 function Other() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
@@ -58,13 +59,15 @@ function Other() {
 
             {/* Floor Inventory Label */}
             <div className="flrInventoryLabelContainer">
-                <div className="flrInventoryLabel">{selectedFloor} Other Items</div>
+                <div className="flrInventoryLabel">{selectedFloor} Other</div>
             </div>
 
             <div className="btnsearchContainer">
                 {/* Add Item Button */}
                 <div className="addBtnContainer">
-                    <button className="addItemBtn">Add Item</button>
+                    <Link to="/add-item">
+                        <button className="addItemBtn">Add Item</button>
+                    </Link>
                 </div>
                 {/* Search Bar */}
                 <div className="addBtnContainer">
@@ -73,7 +76,7 @@ function Other() {
             </div>
 
             {/* Renders Equipment Table/Inventory */}
-            <div>
+            <div className="tableContainer">
                 <table>
                     <thead>
                         <tr>
@@ -88,6 +91,7 @@ function Other() {
                             <th>Out</th>
                             <th>Balance</th>
                             <th>Remarks</th>
+                            <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -104,6 +108,12 @@ function Other() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
+                                <td className="buttons">
+                                    <Link to={`/edit/${item.id}`}>
+                                        <button className="addItemBtn">Edit</button>
+                                    </Link>
+                                    <button className="deleteItemBtn">Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
