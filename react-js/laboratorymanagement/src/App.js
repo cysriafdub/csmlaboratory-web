@@ -19,7 +19,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 
 import Header from './components/header/header';
 import Sidebar from './components/sidebar/sidebar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
  
