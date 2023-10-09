@@ -1,0 +1,73 @@
+
+.labelContainer{
+  margin-top: 30px;
+  margin-bottom: 50;
+ }
+ .inputContainer{
+  margin-bottom: 10px;
+  margin-top: 5px;
+ }
+
+ .loginPageContainer{
+  display: flex;
+  flex-direction: row;
+  padding-top: 190px;
+  justify-content: center;
+  padding-bottom: 250px;
+}
+
+.loginBox{
+  background-color: #D3F1DB;
+  border-radius: 10px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left vertically */
+  justify-content: center; /* Center items horizontally */
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3); /* Add bottom-only shadow */
+  padding: 80px;
+
+}
+.loginBoxContainer{
+  width: 60%;
+  float: right;
+  display: flex;
+  padding-right: 200px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.biglogoContainer{
+  width: 40%;
+  float: left;
+  display: flex;
+  padding-left: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButtonContainer{
+  margin-top: 40px;
+}
+
+.loginButton{
+  background-color: #FAB41F;
+  border: none;
+  border-radius: 8px;
+  height: 75px;
+  width: 580px;
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.loginLabel{
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.loginInput{
+  height: 70px;
+  padding-left: 10px;
+  font-size: 20px;
+}

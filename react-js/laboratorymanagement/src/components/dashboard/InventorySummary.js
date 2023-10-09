@@ -10,8 +10,12 @@ function DashboardSummary() {
             <div className="asContainer">
                 {/* Items Available Summary */}
                 <div className="summaryBox">
+                    <div className="scContainer">
                         <p className="summaryCount">235</p>
-                        <p className="slabel">Items Available</p>
+                    </div>
+                    <div className="slabelContainer">
+                        <p className="slabel">Items Borrowed</p>
+                    </div>
                 </div>
 
                 {/* Items Borrowed Summary */}

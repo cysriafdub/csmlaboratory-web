@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './inventory.css'
+import { Link } from "react-router-dom";
 
 function Miscellaneous() {
     const [selectedFloor, setSelectedFloor] = useState("2nd Floor");
@@ -64,7 +65,9 @@ function Miscellaneous() {
             <div className="btnsearchContainer">
                 {/* Add Item Button */}
                 <div className="addBtnContainer">
-                    <button className="addItemBtn">Add Item</button>
+                    <Link to="/add-item">
+                        <button className="addItemBtn">Add Item</button>
+                    </Link>
                 </div>
                 {/* Search Bar */}
                 <div className="addBtnContainer">
@@ -73,7 +76,7 @@ function Miscellaneous() {
             </div>
 
             {/* Renders Equipment Table/Inventory */}
-            <div>
+            <div className="tableContainer">
                 <table>
                     <thead>
                         <tr>
@@ -88,6 +91,7 @@ function Miscellaneous() {
                             <th>Out</th>
                             <th>Balance</th>
                             <th>Remarks</th>
+                            <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -104,6 +108,12 @@ function Miscellaneous() {
                                 <td>{item.out}</td>
                                 <td>{item.balance}</td>
                                 <td>{item.remarks}</td>
+                                <td className="buttons">
+                                    <Link to={`/edit/${item.id}`}>
+                                        <button className="addItemBtn">Edit</button>
+                                    </Link>
+                                    <button className="deleteItemBtn">Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

@@ -5,22 +5,42 @@ h3{
 }
 
 .summaryCount{
-  font-size: xx-large;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
 .slabel{
-  font-weight: lighter;
+    font-size: 24px;
+    margin-top: 0px;
+    font-weight: lighter;
+    
+}
+
+.scContainer, .slabelContainer{
+    padding-left: 10px;    
 }
 
 .summaryBox{
-  text-align: start;
-  background-color: white;
-  border:1px solid #8CF17C;
-  border-radius: 10px;
-  margin: 5px;
-  width: 250px;
-  padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    text-align: left;
+    background-color: white;
+    border: 3px solid transparent; 
+    border-image: linear-gradient(to right, #8CF17C, #148D00);
+    border-image-slice: 1;
+    border-radius: 30px;
+    margin: 5px;
+    width: 250px;
+    height: 113px;
 }
+
+.asContainer{
+    display: flex;
+    flex-direction: row;
+    
+  }
 
 /* End of Inventory Summary Styles */
 
@@ -93,39 +113,4 @@ input, select{
     margin-left: 30px;
   }
   
-  
-  .loginPageContainer{
-    display: flex;
-    flex-direction: row;
-    padding-top: 190px;
-    justify-content: center;
-    padding-bottom: 250px;
-  }
-  
-  .loginBox{
-    background-color: #D3F1DB;
-    padding: 80px;
-    border-radius: 10px;
-  }
-  
-  .biglogoContainer{
-    margin-right: 100px;
-    margin-top: 140px;
-  }
-  
-  .loginButtonContainer{
-    margin-top: 20px;
-  }
-  
-  .loginButton{
-    background-color: #FAB41F;
-    border: none;
-    border-radius: 8px;
-    height: 40px;
-    width: 580px;
-  }
-  
-  .asContainer{
-    display: flex;
-    flex-direction: row;
-  }
+

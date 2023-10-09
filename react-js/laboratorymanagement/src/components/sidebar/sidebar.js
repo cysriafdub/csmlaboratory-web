@@ -12,7 +12,7 @@ import help from "../../Assets/images/Lamp.png"
 import ng from "../../Assets/images/NewGenes.png"
 
 
-function Navbar() {
+function Sidebar() {
   const [selectedOption, setSelectedOption] = useState('');
   const [subOption, setSubOption] = useState(
     selectedOption === 'manage' ? 'borrowing' : (selectedOption === 'inventory' ? 'glassware' : '')
@@ -201,4 +201,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Sidebar;

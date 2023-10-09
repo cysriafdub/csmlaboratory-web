@@ -1,59 +1,14 @@
 import React from 'react';
 import './App.css';
 
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-/* manage requests*/
-import Borrowing from './components/requests/borrowing/borrow.js';
-import Returning from './components/requests/returning/return.js'
-import Breakage from './components/requests/breakage/breakage.js'
-
-/*tap to view*/
-import BorrowPendingView from './components/transactions/borrowingView/borrowPendingView.js'
-import BorrowAcceptedView from './components/transactions/borrowingView/borrowAcceptedView'
-
-import ReturnPendingView from './components/transactions/returningView/returnPendingView.js'
-import ReturnReturnedView from './components/transactions/returningView/returnReturnedView.js'
-
-import BreakageListView from './components/transactions/breakageView/breakageListView.js';
-import BreakagePendingView from './components/transactions/breakageView/breakagePendingView.js';
-
-
-import Dashboard from './components/dashboard/dashboards.js';
-
 function App() {
+
+
   return (
-    <Router>
+    <Router> {/* Wrap your entire app with the Router */}
+    
       <div className="App">
-        
-        <Routes>
-         <Route path="/dashboard" element={<Dashboard />} />
-         <Route path="/borrowing/dashboard" element={<Dashboard />} />
-         {/* manage request */}
-         <Route path="/borrowing/pending" element={<Borrowing />} />
-         <Route path="/borrowing/accepted" element={<Borrowing />} />
-         <Route path="/borrowing/rejected" element={<Borrowing />} />
-         <Route path="/returning/pending" element={<Returning />} />
-         <Route path="/returning/returned" element={<Returning />} />
-         <Route path="/returning/pending" element={<Returning/> } />
-         <Route path="/breakage/list" element={<Breakage />} />
-         <Route path="/breakage/pending" element={<Breakage />} />
-         <Route path="/breakage/replaced" element={<Breakage/> } />
-        {/* manage request views */}
-        <Route path ="/borrowing/pending/view/:id" element={<BorrowPendingView/> } />
-        <Route path ="/borrowing/accepted/view/:id" element={<BorrowAcceptedView/>} />
-        
-        <Route path ="/returning/pending/view/:id" element={<ReturnPendingView/> } />
-        <Route path ="/returning/returned/view/:id" element={<ReturnReturnedView/> } />
 
-        <Route path ="/breakage/list/view/:id" element={<BreakageListView/> } />
-        <Route path ="/breakage/pending/view/:id" element={<BreakagePendingView/> } />
-         
-
-
-   
-   
         </Routes>
       </div>
     </Router>
