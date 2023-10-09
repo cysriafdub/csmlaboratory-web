@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header/header';
-import Nav from './components/navbar/navbar';
+import Sidebar from './components/sidebar/sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Borrow from './components/manageRequest/borrowing.js';
@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Nav />
+        <Sidebar />
         <Routes>
          <Route path="/dashboard" element={<Dashboard />} />
          <Route path="/manage" element={<Borrow/>} />
